@@ -1,5 +1,10 @@
-name: DevOps-GitHibActions
-on: push
+name: DevOps-GitHubActions
+
+on:
+  pull_request:
+    branches:
+      - main
+
 jobs:
   # Build Job
   build:
@@ -10,7 +15,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: '18.x'
       - name: Install Dependencies
         run: npm install
       - name: Build Project
@@ -23,9 +28,7 @@ jobs:
 
   # Deploy Job
   deploy:
-    # Add a dependency to the build job
     needs: build
-    # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
@@ -36,5 +39,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.CICD_SECRET }}
-          publish_dir: ./dist
+        
