@@ -38,5 +38,7 @@ jobs:
           path: ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        with:
+        with: 
+          github_token: ${{ secrets.CICD_SECRET }}
+          publish_dir: ./dis
         
