@@ -1,4 +1,4 @@
-# React + Vite and Github Ci/CD and Pages
+# React + Vite and Github CI/CD and Pages
 
 This is a demo Application to Test Github CI/CD and Github Pages
 The process used is given below.
