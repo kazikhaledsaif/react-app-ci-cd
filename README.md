@@ -7,5 +7,4 @@ Use husky for pre-commit lint
 
 [Click here to see the deployed link](https://kazikhaledsaif.github.io/react-app-ci-cd-gitpages/)
 
-ここをクリックしてデプロイされたリンクを表示します
 [ここをクリックしてデプロイされたリンクを表示します](https://kazikhaledsaif.github.io/react-app-ci-cd-gitpages/)
